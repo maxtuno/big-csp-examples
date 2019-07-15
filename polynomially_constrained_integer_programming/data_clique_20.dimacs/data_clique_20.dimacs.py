@@ -1,3 +1,13 @@
+"""
+///////////////////////////////////////////////////////////////////////////////
+//        copyright (b) 2012-2019 Oscar Riveros. all rights reserved.        //
+//                        oscar.riveros@peqnp.science                        //
+//                                                                           //
+//   without any restriction, Oscar Riveros reserved rights, patents and     //
+//  commercialization of this knowledge or derived directly from this work.  //
+///////////////////////////////////////////////////////////////////////////////
+"""
+
 import big_csp
 
 if __name__ == '__main__':

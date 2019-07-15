@@ -15,15 +15,11 @@ if __name__ == '__main__':
     o = 0
     p, q = 4, 4
 
-    a = numpy.random.randint(1, 100, size=(p,))
-    b = numpy.random.randint(1, 100, size=(q,))
-
-    numpy.savetxt('a.txt', a, fmt='%i')
-    numpy.savetxt('b.txt', b, fmt='%i')
-
-    encoder = big_csp.Encoder(bits=16)
+    a = numpy.loadtxt('a.txt')
+    b = numpy.loadtxt('b.txt')
 
     while True:
+        encoder = big_csp.Encoder(bits=16)
         x = numpy.empty(shape=(p, q), dtype=big_csp.Entity)
         for i in range(p):
             for j in range(q):
@@ -56,6 +52,6 @@ if __name__ == '__main__':
             print(80 * '-')
             numpy.savetxt('x.txt', numpy.vectorize(int)(x), fmt='%i')
             numpy.savetxt('y.txt', numpy.vectorize(int)(y), fmt='%i')
-        else:
             solver.clear()
+        else:
             break

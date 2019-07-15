@@ -118,28 +118,28 @@ s.t.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\Sigma_{i}^{p}(X^{2})_{i,j}\leq a_{i}$
+\begin_inset Formula $\Sigma_{i}^{n}(X^{2})_{i,j}\leq a_{i}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\Sigma_{j}^{q}(X_{i,j})^{2}\leq b_{j}$
+\begin_inset Formula $\Sigma_{j}^{n}(X_{i,j})^{2}\leq b_{j}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\Sigma_{i}^{p}(Y^{2})_{i,j}\leq a_{i}$
+\begin_inset Formula $\Sigma_{i}^{n}(Y^{2})_{i,j}\leq a_{i}$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\Sigma_{j}^{q}(Y_{i,j})^{2}\leq b_{j}$
+\begin_inset Formula $\Sigma_{j}^{n}(Y_{i,j})^{2}\leq b_{j}$
 \end_inset
 
 

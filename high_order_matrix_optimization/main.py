@@ -13,29 +13,25 @@ import big_csp
 
 if __name__ == '__main__':
     o = 0
-    p, q = 4, 4
+    n = 4
 
-    a = numpy.loadtxt('a.txt')
-    b = numpy.loadtxt('b.txt')
+    a = numpy.loadtxt('a.txt').tolist()
+    b = numpy.loadtxt('b.txt').tolist()
 
     while True:
         encoder = big_csp.Encoder(bits=16)
-        x = numpy.empty(shape=(p, q), dtype=big_csp.Entity)
-        for i in range(p):
-            for j in range(q):
+        x = numpy.empty(shape=(n, n), dtype=big_csp.Entity)
+        y = numpy.empty(shape=(n, n), dtype=big_csp.Entity)
+        for i in range(n):
+            for j in range(n):
                 x[i, j] = big_csp.Entity(encoder)
-
-        y = numpy.empty(shape=(p, q), dtype=big_csp.Entity)
-        for i in range(p):
-            for j in range(q):
                 y[i, j] = big_csp.Entity(encoder)
 
-        for i in range(p):
-            big_csp.Constraint(numpy.linalg.matrix_power(x, 2)[i, :].sum() <= a.tolist()[i])
-            big_csp.Constraint((y ** 2)[i, :].sum() <= b.tolist()[i])
-        for j in range(q):
-            big_csp.Constraint((x ** 2)[:, j].sum() <= a.tolist()[j])
-            big_csp.Constraint(numpy.linalg.matrix_power(y, 2)[:, j].sum() <= b.tolist()[j])
+        for k in range(n):
+            big_csp.Constraint(numpy.linalg.matrix_power(x, 2)[k, :].sum() <= a[k])
+            big_csp.Constraint((x ** 2)[:, k].sum() <= b[k])
+            big_csp.Constraint(numpy.linalg.matrix_power(y, 2)[:, k].sum() <= a[k])
+            big_csp.Constraint((y ** 2)[k, :].sum() <= b[k])
 
         big_csp.Constraint(numpy.dot(x, y).diagonal().sum() > o)
 

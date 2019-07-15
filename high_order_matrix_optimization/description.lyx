@@ -4,7 +4,7 @@
 \begin_header
 \save_transient_properties true
 \origin unavailable
-\textclass article
+\textclass scrartcl
 \use_default_options true
 \maintain_unincluded_children false
 \language english
@@ -29,6 +29,7 @@
 \bibtex_command default
 \index_command default
 \paperfontsize default
+\spacing single
 \use_hyperref false
 \papersize default
 \use_geometry false
@@ -44,6 +45,7 @@
 \use_package undertilde 1
 \cite_engine basic
 \cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
@@ -76,7 +78,7 @@
 \begin_body
 
 \begin_layout Standard
-Giben 
+Let be 
 \begin_inset Formula $a_{i}$
 \end_inset
 
@@ -84,11 +86,23 @@ Giben
 \begin_inset Formula $b_{j}$
 \end_inset
 
-
+ Vectors
 \end_layout
 
 \begin_layout Standard
-maximize 
+and 
+\begin_inset Formula $X,$
+\end_inset
+
+
+\begin_inset Formula $Y$
+\end_inset
+
+ Matrixes
+\end_layout
+
+\begin_layout Standard
+Maximize 
 \begin_inset Formula $\Sigma$
 \end_inset
 

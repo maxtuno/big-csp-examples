@@ -13,7 +13,6 @@ if __name__ == '__main__':
 
     for k in range(n):
         print(numpy.linalg.matrix_power(x, 2)[k, :].sum() <= a[k])
-        print((x ** 2)[:, k].sum() <= a[k])
-        print(numpy.linalg.matrix_power(y, 2)[:, k].sum() <= b[k])
+        print((x ** 2)[:, k].sum() <= b[k])
+        print(numpy.linalg.matrix_power(y, 2)[:, k].sum() <= a[k])
         print((y ** 2)[k, :].sum() <= b[k])
-

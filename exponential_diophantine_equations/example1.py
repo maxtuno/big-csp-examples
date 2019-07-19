@@ -1,10 +1,5 @@
 from big_csp import *
 
-
-def eq():
-    return abs(x ** a - y ** b) == z ** c
-
-
 if __name__ == '__main__':
 
     bits = Encoder(bits=16)
@@ -16,7 +11,8 @@ if __name__ == '__main__':
     b = Entity(bits)
     c = Entity(bits)
 
-    assert (eq())
+    assert (a * x ** a + b * y ** b + c * z ** c == a * b * c * x * y * z)
+    
     assert (x > 1)
     assert (y > 1)
     assert (z > 1)
@@ -26,5 +22,5 @@ if __name__ == '__main__':
 
     solver = Solver()
     while solver.satisfy([x, y, z, a, b, c]):
-        print('abs({0} ** {1} - {2} ** {3}) == {4} ** {5}'.format(x, a, y, b, z, c))
+        print('{1}*{0}**{1} + {3}*{2}**{3} + {5}*{4}**{5} == {1}*{3}*{5}*{0}*{2}*{4}'.format(x, a, y, b, z, c))
     solver.clear()
